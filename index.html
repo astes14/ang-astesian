@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ang Astesian | Opisyal na Pahayagang Pampaaralan</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --primary-color: #111111;
+            --accent-color: #8b0000; /* Editorial Crimson */
+            --bg-color: #fcfbf9; /* Soft newspaper white */
+            --text-color: #222222;
+            --border-color: #dddddd;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* HEADER & MASTHEAD */
+        header {
+            text-align: center;
+            padding: 30px 0 10px 0;
+            border-bottom: 4px double var(--primary-color);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .publication-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .masthead-meta {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-top: 1px solid var(--primary-color);
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--primary-color);
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .search-container input {
+            padding: 6px 12px;
+            font-family: 'Arial', sans-serif;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        /* MAIN NEWSPAPER LAYOUT */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* ARTICLE GRIDS */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Top banner feature spans two columns */
+        .article-card.featured {
+            grid-column: span 2;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 20px;
+        }
+
+        .article-card {
+            background: transparent;
+        }
+
+        .category-tag {
+            font-family: 'Arial', sans-serif;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .article-title {
+            font-size: 1.6rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .article-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .featured .article-title {
+            font-size: 2.5rem;
+        }
+
+        .article-meta {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .article-excerpt {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* SIDEBAR */
+        aside {
+            border-left: 1px solid var(--border-color);
+            padding-left: 20px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 40px;
+        }
+
+        .sidebar-title {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .trending-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .trending-item:last-child {
+            border: none;
+        }
+
+        .trending-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: 1200px;
+            margin: 50px auto 20px auto;
+            border-top: 1px solid var(--primary-color);
+            padding-top: 20px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* RESPONSIVE DESIGN FOR PHONES */
+        @media (max-width: 992px) {
+            nav { justify-content: center; gap: 10px; }
+            .main-container { grid-template-columns: 1fr; }
+            .articles-grid { grid-template-columns: 1fr; }
+            .article-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+            .featured .article-title { font-size: 1.8rem; }
+            aside { border-left: none; padding-left: 0; border-top: 2px solid var(--primary-color); padding-top: 20px; }
+            .publication-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="publication-title">Ang Astesian</div>
+        <div class="masthead-meta">
+            <div>Taong Panuruang 2026-2027</div>
+            <div id="current-date">Agosto 24, 2026</div>
+            <div>Opisyal na Pahayagang Pampaaralan ng ASTES, Inc.</div>
+        </div>
+    </header>
+
+    <!-- TAGALOG NAVIGATION MENU -->
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--accent-color);">Home</a>
+            <a href="balita.html">Balita</a>
+            <a href="isports.html">Isports</a>
+            <a href="opinyon.html">Opinyon</a>
+            <a href="agham.html">Agham & Teknolohiya</a>
+            <a href="panitikan.html">Panitikan</a>
+            <a href="lathalain.html">Lathalain</a>
+            <a href="gallery.html">Galeriya ng Astesian</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="news-search" placeholder="Maghanap sa homepage...">
+        </div>
+    </nav>
+
+    <!-- MAIN APP WRAPPER -->
+    <div class="main-container">
+        
+        <!-- MAIN FRONT PAGE CONTENT -->
+        <main class="articles-grid" id="articles-wrapper">
+            
+            <!-- FEATURED HEADLINE (BALITA) -->
+            <article class="article-card featured" data-title="SSLG, Naglunsad ng Bagong Programang Pangkalikasan sa Paaralan">
+                <div>
+                    <span class="category-tag">Balita</span>
+                    <h2 class="article-title"><a href="balita.html">SSLG, Naglunsad ng Bagong Programang Pangkalikasan sa Paaralan</a></h2>
+                    <div class="article-meta">Ulat ni David Kim • Patnugot ng Balita</div>
+                    <p class="article-excerpt">Pormal nang pinasimulan ng Supreme Secondary Learner Government (SSLG) ang isang makabagong sistema ng pamamahala ng basura at pagreresiklo sa lahat ng koridor ng paaralan upang tuluyang mabawasan ang paggamit ng single-use plastics.</p>
+                </div>
+            </article>
+
+            <!-- SPORTS PREVIEW (ISPORTS) -->
+            <article class="article-card" data-title="Varsity Football Team, Pasok sa Regional Finals Matapos Tapusin ang Laban sa 3-1">
+                <span class="category-tag">Isports</span>
+                <h3 class="article-title"><a href="isports.html">Varsity Football Team, Pasok sa Regional Finals Matapos Tapusin ang Laban sa 3-1</a></h3>
+                <div class="article-meta">Ulat ni Coach Torres</div>
+                <p class="article-excerpt">Pinadapa ng ating koponan sa football ang kalaban matapos magpakita ng matinding depensa at malalakas na sipa sa ikalawang bahagi ng laro kahapon upang makuha ang puwesto sa gaganaping Regional Meet.</p>
+            </article>
+
+            <!-- FEATURE PREVIEW (LATHALAIN) -->
+            <article class="article-card" data-title="Mga Tunay na Bayani ng Kampus: Buhay sa Likod ng Guwardiya">
+                <span class="category-tag">Lathalain</span>
+                <h3 class="article-title"><a href="lathalain.html">Mga Tunay na Bayani ng Kampus: Buhay sa Likod ng Guwardiya</a></h3>
+                <div class="article-meta">Akda ni Chloe Vance</div>
+                <p class="article-excerpt">Isang pagpupugay sa ating mga gwardya sa kanilang maagang gising, mahahabang oras ng pagbabantay, at walang sawang dedikasyon upang mapanatiling ligtas ang paaralan araw-araw...</p>
+            </article>
+
+        </main>
+
+        <!-- FRONT PAGE SIDEBAR -->
+        <aside>
+            <div class="sidebar-section">
+                <h4 class="sidebar-title">Mga Tampok na Ulat</h4>
+                <div class="trending-item">
+                    <span class="category-tag">Agham & Teknolohiya</span>
+                    <div class="trending-title"><a href="agham.html" style="color:inherit; text-decoration:none;">Mag-aaral sa Robotics, Bumuo ng AI Assistant Para sa Aklatan</a></div>
+                </div>
