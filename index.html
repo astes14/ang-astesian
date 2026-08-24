@@ -30,7 +30,7 @@
         /* HEADER & MASTHEAD */
         header {
             text-align: center;
-            padding: 30px 0 10px 0;
+            padding: 20px 0 10px 0;
             border-bottom: 4px double var(--primary-color);
             max-width: 1200px;
             margin: 0 auto;
@@ -97,67 +97,76 @@
             gap: 40px;
         }
 
-        /* ARTICLE GRIDS */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        /* Top banner feature spans two columns */
-        .article-card.featured {
-            grid-column: span 2;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 20px;
-        }
-
-        .article-card {
+        /* ABOUT US & EDITORIAL BOARD STYLING */
+        .editorial-content-block {
             background: transparent;
+            padding-right: 10px;
         }
 
-        .category-tag {
+        .about-section-header {
             font-family: 'Arial', sans-serif;
-            color: var(--accent-color);
             text-transform: uppercase;
-            font-size: 0.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 5px;
-        }
-
-        .article-title {
-            font-size: 1.6rem;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-
-        .article-title a {
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .article-title a:hover {
             color: var(--accent-color);
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
-        .featured .article-title {
-            font-size: 2.5rem;
-        }
-
-        .article-meta {
-            font-family: 'Arial', sans-serif;
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .article-excerpt {
-            font-size: 1rem;
+        .about-text {
+            font-size: 1.15rem;
+            text-align: justify;
+            margin-bottom: 40px;
             color: #333;
+            text-indent: 40px;
+        }
+
+        /* MASTHEAD LIST PANEL */
+        .masthead-container {
+            background: #f4f1ea;
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .masthead-title {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .masthead-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #cccccc;
+            font-size: 1.05rem;
+        }
+
+        .masthead-row:last-child {
+            border-bottom: none;
+        }
+
+        .role-title {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .staff-name {
+            font-family: 'Georgia', serif;
+            text-align: right;
+            color: #111111;
         }
 
         /* SIDEBAR */
@@ -194,6 +203,16 @@
             line-height: 1.3;
         }
 
+        .category-tag {
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
         /* FOOTER */
         footer {
             max-width: 1200px;
@@ -206,39 +225,35 @@
             color: #666;
         }
 
-        /* RESPONSIVE DESIGN FOR PHONES */
+        /* RESPONSIVE DESIGN FOR MOBILE PHONES */
         @media (max-width: 992px) {
             nav { justify-content: center; gap: 10px; }
             .main-container { grid-template-columns: 1fr; }
-            .articles-grid { grid-template-columns: 1fr; }
-            .article-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
-            .featured .article-title { font-size: 1.8rem; }
             aside { border-left: none; padding-left: 0; border-top: 2px solid var(--primary-color); padding-top: 20px; }
             .publication-title { font-size: 2.5rem; }
+            .masthead-row { flex-direction: column; text-align: left; }
+            .staff-name { text-align: left; margin-top: 2px; }
         }
     </style>
 </head>
 <body>
 
-<!-- BULLETPROOF HEADER CODE -->
-<header style="padding: 20px 0 10px 0;">
-    <!-- LOGO CONTAINER -->
-    <div style="text-align: center; margin-bottom: 10px;">
-        <picture>
-            <source srcset="schoolbrand.png" type="image/png">
-            <img src="logo.jpg.png" alt="Ang Astesian Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;" onerror="this.src='logo.jpg.png'">
-        </picture>
-    </div>
-    
-    <div class="publication-title">Ang Astesian</div>
-    <div class="masthead-meta">
-        <div>ASTES News and Current Affairs</div>
-        <div id="current-date">Agosto 24, 2026</div>
-        <div>Opisyal na Pahayagan ng ASTES, Inc.</div>
-    </div>
-</header>
+    <!-- HEADER SECTION -->
+    <header>
+        <!-- LOGO IMAGE PIPELINE BLOCK -->
+        <div style="text-align: center; margin-bottom: 10px;">
+            <img src="logo.jpg.png" alt="Ang Astesian Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
+        </div>
+        
+        <div class="publication-title">Ang Astesian</div>
+        <div class="masthead-meta">
+            <div>Balitang Astesian sa Digital Platform</div>
+            <div id="current-date">Agosto 2026</div>
+            <div>Opisyal na Pahayagan ng ASTES, Inc.</div>
+        </div>
+    </header>
 
-    <!-- TAGALOG NAVIGATION MENU -->
+    <!-- NAVIGATION MENU LINKS -->
     <nav>
         <div class="nav-links">
             <a href="index.html" style="color: var(--accent-color);">Home</a>
@@ -248,44 +263,60 @@
             <a href="agham.html">Agham & Teknolohiya</a>
             <a href="panitikan.html">Panitikan</a>
             <a href="lathalain.html">Lathalain</a>
-            <a href="gallery.html">Galeriya ng Astesian</a>
+            <a href="gallery.html">Astesian's Gallery</a>
         </div>
         <div class="search-container">
-            <input type="text" id="news-search" placeholder="Maghanap sa homepage...">
+            <input type="text" id="news-search" placeholder="Maghanap...">
         </div>
     </nav>
 
-    <!-- MAIN APP WRAPPER -->
+    <!-- MAIN WRAPPER CONTAINER -->
     <div class="main-container">
         
-        <!-- MAIN FRONT PAGE CONTENT -->
-        <main class="articles-grid" id="articles-wrapper">
+        <!-- LEFT SIDE: ABOUT US & EDITORIAL STAFF GRID -->
+        <main class="editorial-content-block">
             
-            <!-- FEATURED HEADLINE (BALITA) -->
-            <article class="article-card featured" data-title="Random Bag Inspection, isinagawa sa ASTES nitong Lunes, Agosto 24">
-                <div>
-                    <span class="category-tag">Balita</span>
-                    <h2 class="article-title"><a href="balita.html">Random Bag Inspection, isinagawa sa ASTES nitong Lunes, Agosto 24</a></h2>
-                    <div class="article-meta">Ulat ni Marry Joy C. Macalalad • Patnugot ng Balita</div>
-                    <p class="article-excerpt">Isinagawa ang random bag inspection sa ASTES noong Agosto 24, sa pangunguna ng mga guro katuwang ang Central Student Parliament o CSP. Pagkatapos ng general assembly, hindi muna pinapasok ang Astesians at habang ang kanilang bags ay nasa loob ng classroom. "In light of the recent shooting in Ateneo de Zamboanga, we will be conducting the random bag inspection just to ensure that all students are following the school policies regarding the deadly weapons or any object that could cause harm to students and staff. Hindi kayo pinagbibintangan kundi para lang makasigurado tayo." ani Sir Paul Jerome Alban, Director for Student Affairs and Services. Nakumpiska ang mga gunting, na ayon sa mga mag-aaral ay gagamitin sa ilang mga subjects. Tiniyak naman ng CSP at ASAS na maibabalik ang lahat ng nakumpiskang gunting pagkatapos ng klase.</p>
+            <!-- ABOUT US DIVISION -->
+            <h2 class="about-section-header">About Us</h2>
+            <p class="about-text">
+                Ang 'Ang Astesian' ay ang opisyal na pahayagan ng Advanced Skills Training and Education Services, Inc. o ASTES. Bagaman papel at panulat ang aming sandata at kaagapay sa paghahatid ng impormasyon, ginamit namin ang digital na pamamaraan upang mas mapalawak at maipaabot pa sa Astesian ang mga kasalukuyang balita at kaganapan sa paaralan, mga mag-aaral, at iba pang katuwang nito sa pagtupad ng misyon ng paaralan.
+            </p>
+
+            <!-- STAFF ROSTER PROFILE (LUPON NG PATNUGUTAN) -->
+            <div class="masthead-container">
+                <h3 class="masthead-title">Lupon ng Patnugutan</h3>
+                
+                <div class="masthead-row">
+                    <span class="role-title">Punong Patnugot/Editor-in-Chief</span>
+                    <span class="staff-name">Marry Joy C. Macalalad</span>
                 </div>
-            </article>
-
-            <!-- AKADEMIKS PREVIEW (AKADEMIKS) -->
-            <article class="article-card" data-title="Intervention Program para sa mga Hirap sa Reading Comrehension, Inilunsad">
-                <span class="category-tag">AKADEMIKS</span>
-                <h3 class="article-title"><a href="isports.html">Intervention Program para sa mga Hirap sa Reading Comrehension, Inilunsad</a></h3>
-                <div class="article-meta">Ulat ni Sherylyn D. Malit</div>
-                <p class="article-excerpt">Agosto 24, inilunsad ng LinguistiQ Guild ang intervention program para sa mga mag-aaral na nahihirapan sa pagbabasa at pag-unawa sa mga binasa. Ito ay matapos makalap ang datos ng BoSY (Beginning of School Year) Literacy and Numeracy Knowledge (LiNK) Assessment, kung saan dalawa lamang sa apatnapu't limang kumuha sa Baitang 11 ang pumasok sa "At Grade Level" na may gradong 76-100%. Karamihan ay nasa "Emerging Level" na may gradong 51-70%. Sa Grade 12 naman, labing-isa lamang sa apatnapu ang pumasok sa "At Grade Level." Pinamunuan ng tagapayo ng LinguistiQ Guild na si Ma'am Jisel Palma ang pagsisimula ng programa. Layunin nito na mahasa pa ang Astesians sa pagbasa at pag-unawa ng mga binasa dahil, anila, maaaring magkaroon din ito ng epekto sa iba pang asignatura. Sa pagtatapos ng taon, inaasahan ni Ma'am Palma na mas dadami pa ang mga mag-aaral na mapapabilang sa "At Grade Level."</p>
-            </article>
-
-            <!-- FEATURE PREVIEW (LATHALAIN) -->
-            <article class="article-card" data-title="Mga Tunay na Bayani ng Kampus: Buhay sa Likod ng Guwardiya">
-                <span class="category-tag">Lathalain</span>
-                <h3 class="article-title"><a href="lathalain.html">Mga Tunay na Bayani ng Kampus: Buhay sa Likod ng Guwardiya</a></h3>
-                <div class="article-meta">Akda ni Chloe Vance</div>
-                <p class="article-excerpt">Isang pagpupugay sa ating mga gwardya sa kanilang maagang gising, mahahabang oras ng pagbabantay, at walang sawang dedikasyon upang mapanatiling ligtas ang paaralan araw-araw...</p>
-            </article>
+                <div class="masthead-row">
+                    <span class="role-title">Pangalawang Patnugot/Associate Editor</span>
+                    <span class="staff-name">Jayvin B. Apaya</span>
+                </div>
+                <div class="masthead-row">
+                    <span class="role-title">Tagapamahalang Patnugot/Managing Editor</span>
+                    <span class="staff-name">Lindsay N. Pomeda</span>
+                </div>
+                <div class="masthead-row">
+                    <span class="role-title">Balita/News</span>
+                    <span class="staff-name">Sherylyn D. Malit</span>
+                </div>
+                <div class="masthead-row">
+                    <span class="role-title">Lathalain/Feature&Literary</span>
+                    <span class="staff-name">Denlyn S. Aloya / Lindsay N. Pomeda</span>
+                </div>
+                <div class="masthead-row">
+                    <span class="role-title">Isports/Sports</span>
+                    <span class="staff-name">Jhon Russel S. Evora / Michael James B. Martin</span>
+                </div>
+                <div class="masthead-row">
+               	    <span class="role-title">Tagapagdisenyo/Layout Artist</span>
+                    <span class="staff-name">Michael James B. Martin</span>
+                </div>
+                <div class="masthead-row">
+                    <span class="role-title">Dibuhista/Editorial Cartoonist</span>
+                    <span class="staff-name">Jhon Russel S. Evora</span>
 
         </main>
 
