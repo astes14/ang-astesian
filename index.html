@@ -220,15 +220,21 @@
 </head>
 <body>
 
-    <!-- HEADER SECTION -->
-    <header>
-        <div class="publication-title">Ang Astesian</div>
-        <div class="masthead-meta">
-            <div>Taong Panuruang 2026-2027</div>
-            <div id="current-date">Agosto 24, 2026</div>
-            <div>Opisyal na Pahayagang Pampaaralan ng ASTES, Inc.</div>
-        </div>
-    </header>
+    <!-- HEADER SECTION WITH LOGO INTEGRATION -->
+<header style="padding: 20px 0 10px 0;">
+    <!-- LOGO CONTAINER -->
+    <div style="text-align: center; margin-bottom: 10px;">
+        <img src="logo.png.jpg" alt="Ang Astesian Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
+    </div>
+    
+    <div class="publication-title">Ang Astesian</div>
+    <div class="masthead-meta">
+        <div>Ang Astesian News and Current Affairs</div>
+        <div id="current-date">Agosto 24, 2026</div>
+        <div>Opisyal na Pahayagan ng ASTES, Inc. sa Digital</div>
+    </div>
+</header>
+
 
     <!-- TAGALOG NAVIGATION MENU -->
     <nav>
@@ -254,21 +260,21 @@
         <main class="articles-grid" id="articles-wrapper">
             
             <!-- FEATURED HEADLINE (BALITA) -->
-            <article class="article-card featured" data-title="SSLG, Naglunsad ng Bagong Programang Pangkalikasan sa Paaralan">
+            <article class="article-card featured" data-title="Random Bag Inspection, isinagawa sa ASTES nitong Lunes, Agosto 24">
                 <div>
                     <span class="category-tag">Balita</span>
-                    <h2 class="article-title"><a href="balita.html">SSLG, Naglunsad ng Bagong Programang Pangkalikasan sa Paaralan</a></h2>
-                    <div class="article-meta">Ulat ni David Kim • Patnugot ng Balita</div>
-                    <p class="article-excerpt">Pormal nang pinasimulan ng Supreme Secondary Learner Government (SSLG) ang isang makabagong sistema ng pamamahala ng basura at pagreresiklo sa lahat ng koridor ng paaralan upang tuluyang mabawasan ang paggamit ng single-use plastics.</p>
+                    <h2 class="article-title"><a href="balita.html">Random Bag Inspection, isinagawa sa ASTES nitong Lunes, Agosto 24</a></h2>
+                    <div class="article-meta">Ulat ni Marry Joy C. Macalalad • Patnugot ng Balita</div>
+                    <p class="article-excerpt">Isinagawa ang random bag inspection sa ASTES noong Agosto 24, sa pangunguna ng mga guro katuwang ang Central Student Parliament o CSP. Pagkatapos ng general assembly, hindi muna pinapasok ang Astesians at habang ang kanilang bags ay nasa loob ng classroom. "In light of the recent shooting in Ateneo de Zamboanga, we will be conducting the random bag inspection just to ensure that all students are following the school policies regarding the deadly weapons or any object that could cause harm to students and staff. Hindi kayo pinagbibintangan kundi para lang makasigurado tayo." ani Sir Paul Jerome Alban, Director for Student Affairs and Services. Nakumpiska ang mga gunting, na ayon sa mga mag-aaral ay gagamitin sa ilang mga subjects. Tiniyak naman ng CSP at ASAS na maibabalik ang lahat ng nakumpiskang gunting pagkatapos ng klase.</p>
                 </div>
             </article>
 
-            <!-- SPORTS PREVIEW (ISPORTS) -->
-            <article class="article-card" data-title="Varsity Football Team, Pasok sa Regional Finals Matapos Tapusin ang Laban sa 3-1">
-                <span class="category-tag">Isports</span>
-                <h3 class="article-title"><a href="isports.html">Varsity Football Team, Pasok sa Regional Finals Matapos Tapusin ang Laban sa 3-1</a></h3>
-                <div class="article-meta">Ulat ni Coach Torres</div>
-                <p class="article-excerpt">Pinadapa ng ating koponan sa football ang kalaban matapos magpakita ng matinding depensa at malalakas na sipa sa ikalawang bahagi ng laro kahapon upang makuha ang puwesto sa gaganaping Regional Meet.</p>
+            <!-- AKADEMIKS PREVIEW (AKADEMIKS) -->
+            <article class="article-card" data-title="Intervention Program para sa mga Hirap sa Reading Comrehension, Inilunsad">
+                <span class="category-tag">AKADEMIKS</span>
+                <h3 class="article-title"><a href="isports.html">Intervention Program para sa mga Hirap sa Reading Comrehension, Inilunsad</a></h3>
+                <div class="article-meta">Ulat ni Sherylyn D. Malit</div>
+                <p class="article-excerpt">Agosto 24, inilunsad ng LinguistiQ Guild ang intervention program para sa mga mag-aaral na nahihirapan sa pagbabasa at pag-unawa sa mga binasa. Ito ay matapos makalap ang datos ng BoSY (Beginning of School Year) Literacy and Numeracy Knowledge (LiNK) Assessment, kung saan dalawa lamang sa apatnapu't limang kumuha sa Baitang 11 ang pumasok sa "At Grade Level" na may gradong 76-100%. Karamihan ay nasa "Emerging Level" na may gradong 51-70%. Sa Grade 12 naman, labing-isa lamang sa apatnapu ang pumasok sa "At Grade Level." Pinamunuan ng tagapayo ng LinguistiQ Guild na si Ma'am Jisel Palma ang pagsisimula ng programa. Layunin nito na mahasa pa ang Astesians sa pagbasa at pag-unawa ng mga binasa dahil, anila, maaaring magkaroon din ito ng epekto sa iba pang asignatura. Sa pagtatapos ng taon, inaasahan ni Ma'am Palma na mas dadami pa ang mga mag-aaral na mapapabilang sa "At Grade Level."</p>
             </article>
 
             <!-- FEATURE PREVIEW (LATHALAIN) -->
@@ -284,8 +290,29 @@
         <!-- FRONT PAGE SIDEBAR -->
         <aside>
             <div class="sidebar-section">
-                <h4 class="sidebar-title">Mga Tampok na Ulat</h4>
-                <div class="trending-item">
-                    <span class="category-tag">Agham & Teknolohiya</span>
-                    <div class="trending-title"><a href="agham.html" style="color:inherit; text-decoration:none;">Mag-aaral sa Robotics, Bumuo ng AI Assistant Para sa Aklatan</a></div>
-                </div>
+                <div class="sidebar-section">
+    <h4 class="sidebar-title">Mga Kaganapan at Patalastas</h4>
+    
+    <!-- KAGANAPAN 1 -->
+    <div class="trending-item" style="padding: 10px 0; border-bottom: 1px dashed var(--border-color);">
+        <span class="category-tag" style="color: #d62828;">Isports</span>
+        <div class="trending-title" style="font-size: 1rem; font-weight: bold; margin-top: 2px;">Lakasayahan 2026 (Intramurals)</div>
+        <p style="font-size: 0.85rem; color: #555; line-height: 1.4;">Maraming salamat, Astesians sa aktibong pakikilahok sa isa na namang matagumpay na Lakasayahan. Mabuhay ang atletang Astesian! Mabuhay ang atletang Pilipino! Mula sa ASTES Sports CLub</p>
+    </div>
+
+    <!-- KAGANAPAN 2 -->
+    <div class="trending-item" style="padding: 10px 0; border-bottom: 1px dashed var(--border-color);">
+        <span class="category-tag" style="color: #4a2c2a;">Kultura</span>
+        <div class="trending-title" style="font-size: 1rem; font-weight: bold; margin-top: 2px;">Pagdiriwang ng Buwan ng Wika</div>
+        <p style="font-size: 0.85rem; color: #555; line-height: 1.4;">Huwag kakalimutan na magsuot ng katutubo, makabayan, o pambansang kasuotan sa darating na Agosto 26, 2026 bilang pagdiriwang sa Buwan ng Wika at Buwan ng Kasaysayan, hatid sa inyo ng Samahang Filipino!</p>
+    </div>
+
+    <!-- KAGANAPAN 3 -->
+    <div class="trending-item" style="padding: 10px 0;">
+        <span class="category-tag" style="color: #8b0000;">Akademiks</span>
+        <div class="trending-title" style="font-size: 1rem; font-weight: bold; margin-top: 2px;">First Term Examination</div>
+        <p style="font-size: 0.85rem; color: #d62828; font-weight: bold; line-height: 1.4;">📅 Agosto 28, 2026</p>
+        <p style="font-size: 0.85rem; color: #555; line-height: 1.4;">Reminder sa lahat ng Astesians: Sa darating na Biyernes na ang ating First Term Examination, kaya ibuhos ang oras, panahon, at sarili sa pagrerebyu. Good luck, Astesians!</p>
+    </div>
+</div>
+
