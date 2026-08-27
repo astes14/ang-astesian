@@ -6,7 +6,7 @@
     <title>Lathalain | Ang Astesian</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        :root { --primary-color: #111111; --accent-color: #008080; --bg-color: #fcfbf9; --text-color: #222222; }
+        :root { --primary-color: #111111; --accent-color: #008080; --bg-color: #fcfbf9; --text-color: #222222; --border-color: #dddddd; }
         body { font-family: 'Georgia', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 0 20px; }
         header { text-align: center; padding: 30px 0 10px 0; border-bottom: 4px double var(--primary-color); max-width: 1200px; margin: 0 auto; }
         .publication-title { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; }
@@ -19,52 +19,70 @@
         .feature-article { border-bottom: 1px solid #dddddd; padding-bottom: 30px; }
         .article-title { font-size: 2.2rem; line-height: 1.2; margin-bottom: 10px; }
         .article-meta { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: #666; margin-bottom: 15px; }
-	.article-flex-wrapper { display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
-        .article-image-column { flex: 1; min-width: 300px; }
-        .article-text-column { flex: 1.5; min-width: 300px; }
-	.feature-img { width: 100%; height: auto; border-radius: 4px; border: 1px solid var(--border-color); }
         .feature-paragraph { font-size: 1.15rem; color: #333; margin-bottom: 15px; text-indent: 40px; text-align: justify; }
         footer { max-width: 1200px; margin: 50px auto 20px auto; border-top: 1px solid var(--primary-color); padding-top: 20px; text-align: center; font-family: 'Arial', sans-serif; font-size: 0.85rem; color: #666; }
-	@media (max-width: 768px) {
-            .article-flex-wrapper { flex-direction: column; }
+        @media (max-width: 768px) {
             .article-title { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
     <header>
         <div style="text-align: center; margin-bottom: 10px;">
-            <img src="logo.png" alt="Ang Astesian Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
-	</div>
+            <!-- Ginamit ang logo.jpg.png para tugma sa logo asset mo sa GitHub -->
+            <img src="logo.jpg.png" alt="Ang Astesian Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
+        </div>
         <div class="publication-title">Ang Astesian</div>
         <div class="masthead-meta"><div>Tampok na Kuwento</div><div>Agosto 2026</div><div>Opisyal na Pahayagan ng ASTES, Inc.</div></div>
     </header>
     <nav>
         <div class="nav-links">
-            <a href="index.html">Home</a><a href="balita.html">Balita</a><a href="isports.html">Isports</a><a href="opinyon.html">Opinyon</a><a href="agham.html">Agham & Teknolohiya</a><a href="panitikan.html">Panitikan</a><a href="lathalain" style="color: var(--accent-color);">Lathalain</a><a href="gallery.html">Astesian's Gallery</a>
+            <a href="index.html">Home</a><a href="balita.html">Balita</a><a href="isports.html">Isports</a><a href="opinyon.html">Opinyon</a><a href="agham.html">Agham & Teknolohiya</a><a href="panitikan.html">Panitikan</a><a href="lathalain.html" style="color: var(--accent-color);">Lathalain</a><a href="gallery.html">Astesian's Gallery</a>
         </div>
     </nav>
     <h1 class="section-header">Mga Lathalain</h1>
+    
     <div class="main-container">
         <article class="feature-article">
             <h2 class="article-title">Sir Ariel: Tatak ng Pahimakas, Yakap ng Alaala</h2>
             <div class="article-meta">Akda nina Lindsay N. Pomeda at Denlyn S. Aloya</div>
 
-<div class="article-flex-wrapper">
-<div class="article-image-column">
-<img src="ariel.jpg" alt="Sir Ariel: Tatak ng Pahimakas, Yakap ng Alaala" class="feature-img">
-                </div>
-	<div class="article-text-column">
-                    <p class="feature-paragraph">
+            
+            <div style="width: 100%; display: block; overflow: hidden;">
+                
+                
+                <img src="ariel.jpg" alt="Sir Ariel: Tatak ng Pahimakas, Yakap ng Alaala" 
+                     style="float: left; width: 35%; max-width: 400px; min-width: 260px; height: auto; margin-right: 25px; margin-bottom: 15px; border-radius: 4px; border: 1px solid var(--border-color);">
+                
+                
+                <p class="feature-paragraph">
+                    Maraming mga tao ang nagsasabi na walang nanatiling matagal sa mundong ating ginagalawan. Pero ang totoo niyan ay merong isang bagay na tiyak na naiiwan sa mundong ito ilang taon man ang lumipas— ang mga alaala.
+                </p>
+                
+                <p class="feature-paragraph">
+		Ang gunita ng kahapon ay isang bagay na nakaukit sa bawat memorya ng mga taong ating nakakasalamuha. Mga panyayari na naging importante sa kanilang buhay at mga kabutihang ating ipinamahagi na nakataktak sa kanilang puso't isipan.
+                </p>
+                <p class="feature-paragraph">
+		Sa pagtakbo ng oras, maraming bagay ang mahirap kontrolin at maraming taon ang dumadagdag sa edad natin. Si Ginoong Ariel A. Cayetano ang dating school administrator ng paaralang Advanced Skills and Training Education Services, Inc. na biglaang pumanaw noong Marso 3, 2026, ay nagsilbing haligi ng ASTES. Sa araw-araw na operasyon ng paaralan, palagi siyang nandiyan upang gumabay at siguruhing ligtas ang mga guro at mag-aaral. Ang kanyang biglang pagkawala ay nagbigay ng matamlay na klima sa paaralan. Mula sa masayang kapaligiran ay tila nadaanan ng isang malakas na bagyo na siyang nag iwan ng pinsala sa puso ng bawat mag-aaral, guro, kapamilya at iba pang kawani ng paaralan.
+                </p>
+		<p class="feature-paragraph">
+		Si Ginoong Ariel na nagbigay kasiyahan, inspirasyon, at gabay sa bawat isa – nagsisilbing hiwaga sa ating memorya na kailaman ay hindi malilimutan. Tuwing umaga pagkadating, ngiti niya na abot langit ang bumabalot kaya nagiging magaan ang atmospera sa paaralan. Saang sulok man ng silid aralan o mapa-saan man, memorya na kanyang iniwan ang patuloy na naaalala kailanman. Sa isang silid na kung saan pinapanood niya ang iba't ibang kaganapan - tingin dito, tingin doon ang kanyang palaging pinagkaka-abalahan. Hindi man niya nakakasalamuha lahat ng mag-aaral ngunit isang sulyap lang ay makikilala na niya agad kung sino ang nasa harapan. Hindi nakalinya sa akadamiya ang propsesyon ni Sir Ariel, ngunit, sa tawag ng tungkulin bilang tagapangasiwa ng paaralan, nakita ng lahat ng nakakakilala sa kaniya kung paanong ibinuhos niya ang oras at panahon upang aralin ang tungkuling iniatas sa kaniya. Noon, hindi mo siya makikitang may hawak ng mikropono kapag may programa. Ngunit nang siya ay maging tagapangasiwa, siya na ang inaasahan ng Astesian na huling magsasalita upang tapusin ang programa, at magpasalamat sa lahat nang nakiisa sa tagumpay ng araw.	
+		</p>
+		<p class="feature-paragraph">
+		Para sa mga gurong kanyang naging kaagapay, lungkot at saya ang bitbit sa araw araw. Isa sa magandang gunita sa kanya ay pagpasok sa eskwelahan bitbit ang ilang mga papel na kailangan tungo agad sa faculty room upang kumustahin ang mga tagapagturo sa paaralan. Kung minsan ay bigla-biglang kumakatok sa pintuan upang magpagtulong sa mga gawain at magtanong ng tungkol sa mga mag-aaral. Dagdag dito, makita lang niya na puro may ginagawa ang lahat, busy don, gawa dito, ay nakahanda na agad ang kanyang pitaka sapagkat ang kailangang halaga ay bigay agad niya. Kaya para sa lahat, isa siyang hulog ng langit sa sobrang kabaitan.
+		</p>
+		<p class="feature-paragraph">
+		Sa bawat araw na nagtatapos, maraming kwento ang nauudlot. Ang balitang bigla ninyong pagkawala ay nagdulot ng katahimikan sa puso ng Astesians. Sa mga mag-aaral na kaniyang naiwan, para sa kanila ay siya ang ikalawang ama, sandalan at takbuhan sa ikalawang tahanan. Ika nga nila "Mahirap magpaalam sa taong may malaking ginampanan sa buhay" dala dala ang pighati na anuman ang mangyari ay di na pwedeng balikan.
+		</p>
+		<p class="feature-paragraph">
+Ang buhay ay walang katiyakan na nararapat pahalagahan at ingatan. Sa pamumuhay araw-araw laging piliing gumawa ng kabutihan, masasayang alaala at magpangiti ng ibang tao. Sapagkat minsan hindi mahalaga kung gaano katagal na nakasama mo ang isang tao habang nabubuhay sa mundo kundi kung gaano kadami ang ginawang alaala kasama sila. Sabi nga sa kanta "Tatanda at lilipas din ako. Ngunit mayroong awiting iiwanan sa inyong alaala dahil minsan tayo'y nagkasama." Hindi man natin sila nakasama hanggang wakas pero may maiiwan naman tayong malalim na bakas.
+		</p>
+		<p class="feature-paragraph">
 
-            <p style="text-indent: 40px; text-align: justify;">Maraming mga tao ang nagsasabi na walang nanatiling matagal sa mundong ating ginagalawan. Pero ang totoo niyan ay merong isang bagay na tiyak na naiiwan sa mundong ito ilang taon man ang lumipas— ang mga alaala. 
-<p style="text-indent: 40px; text-align: justify;">Ang gunita ng kahapon ay isang bagay na nakaukit sa bawat memorya ng mga taong ating nakakasalamuha. Mga panyayari na naging importante sa kanilang buhay at mga kabutihang ating ipinamahagi na nakataktak sa kanilang puso't isipan.
-<p style="text-indent: 40px; text-align: justify;">Sa pagtakbo ng oras, maraming bagay ang mahirap kontrolin at maraming taon ang dumadagdag sa edad natin. Si Ginoong Ariel A. Cayetano ang dating school administrator ng paaralang Advanced Skills and Training Education Services, Inc. na biglaang pumanaw noong Marso 3, 2026, ay nagsilbing haligi ng ASTES. Sa araw-araw na operasyon ng paaralan, palagi siyang nandiyan upang gumabay at siguruhing ligtas ang mga guro at mag-aaral. Ang kanyang biglang pagkawala ay nagbigay ng matamlay na klima sa paaralan. Mula sa masayang kapaligiran ay tila nadaanan ng isang malakas na bagyo na siyang nag iwan ng pinsala sa puso ng bawat mag-aaral, guro, kapamilya at iba pang kawani ng paaralan.
-<p style="text-indent: 40px; text-align: justify;">Si Ginoong Ariel na nagbigay kasiyahan, inspirasyon, at gabay sa bawat isa – nagsisilbing hiwaga sa ating memorya na kailaman ay hindi malilimutan. Tuwing umaga pagkadating, ngiti niya na abot langit ang bumabalot kaya nagiging magaan ang atmospera sa paaralan. Saang sulok man ng silid aralan o mapa-saan man, memorya na kanyang iniwan ang patuloy na naaalala kailanman. Sa isang silid na kung saan pinapanood niya ang iba't ibang kaganapan -  tingin dito, tingin doon ang kanyang palaging pinagkaka-abalahan. Hindi man niya nakakasalamuha lahat ng mag-aaral ngunit isang sulyap lang ay makikilala na niya agad kung sino ang nasa harapan. Hindi nakalinya sa akadamiya ang propsesyon ni Sir Ariel, ngunit, sa tawag ng tungkulin bilang tagapangasiwa ng paaralan, nakita ng lahat ng nakakakilala sa kaniya kung paanong ibinuhos niya ang oras at panahon upang aralin ang tungkuling iniatas sa kaniya. Noon, hindi mo siya makikitang may hawak ng mikropono kapag may programa. Ngunit nang siya ay maging tagapangasiwa, siya na ang inaasahan ng Astesian na huling magsasalita upang tapusin ang programa, at magpasalamat sa lahat nang nakiisa sa tagumpay ng araw. 
-<p style="text-indent: 40px; text-align: justify;">Para sa mga gurong kanyang naging kaagapay, lungkot at saya ang bitbit sa araw araw. Isa sa magandang gunita sa kanya ay pagpasok sa eskwelahan bitbit ang ilang mga papel na kailangan tungo agad sa faculty room upang kumustahin ang mga tagapagturo sa paaralan. Kung minsan ay bigla-biglang kumakatok sa pintuan upang  magpagtulong sa mga gawain at  magtanong ng tungkol sa mga mag-aaral. Dagdag dito, makita lang niya na puro may ginagawa ang lahat, busy don, gawa dito, ay nakahanda na agad ang kanyang pitaka sapagkat ang kailangang halaga ay bigay agad niya. Kaya para sa lahat, isa siyang hulog ng langit sa sobrang kabaitan. 
-<p style="text-indent: 40px; text-align: justify;">Sa bawat araw na nagtatapos, maraming kwento ang nauudlot. Ang balitang bigla ninyong pagkawala ay nagdulot ng katahimikan sa puso ng Astesians. Sa mga mag-aaral na kaniyang naiwan, para sa kanila ay siya  ang ikalawang ama, sandalan at takbuhan sa ikalawang tahanan. Ika nga nila "Mahirap magpaalam sa taong may malaking ginampanan sa buhay" dala dala ang pighati na anuman ang mangyari ay di na pwedeng balikan.
-<p style="text-indent: 40px; text-align: justify;">Ang buhay ay walang katiyakan na nararapat pahalagahan at ingatan. Sa pamumuhay araw-araw laging piliing gumawa ng kabutihan, masasayang alaala at magpangiti ng ibang tao. Sapagkat minsan hindi mahalaga kung gaano katagal na nakasama mo ang isang tao habang nabubuhay sa mundo kundi kung gaano kadami ang ginawang alaala kasama sila. Sabi nga sa kanta "Tatanda at lilipas din ako. Ngunit mayroong awiting iiwanan sa inyong alaala dahil minsan tayo'y nagkasama." Hindi man natin sila nakasama hanggang wakas pero may maiiwan naman tayong malalim na bakas.</p>
+            </div> 
         </article>
     </div>
+
     <footer><p>&copy; 2026 Ang Astesian. All rights reserved.</p></footer>
 </body>
 </html>
