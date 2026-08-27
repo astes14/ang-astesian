@@ -3,41 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeriya ng Astesian | Ang Astesian</title>
+    <title>Astesian's Gallery | Ang Astesian</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* CSS RESET & VARIABLES */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
         :root { 
             --primary-color: #111111; 
             --accent-color: #8b0000; /* Ginamit ang Editorial Crimson katulad ng Homepage */
             --bg-color: #fcfbf9; /* Soft newspaper white (Maliwanag na background) */
-            --text-color: #222222;
- 	    --border-color: #dddddd;
-
+            --text-color: #222222; 
+            --border-color: #dddddd;
         }
-
-        body { font-family: 'Georgia', serif; background-color: var(--bg-color); color: var(--text-color); padding: 0 20px; line-height: 1.6; }
-        header { text-align: center; padding: 30px 0 10px 0; border-bottom: 4px double var(--text-color); max-width: 1200px; margin: 0 auto; }
-        .publication-title { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; }
-        .masthead-meta { font-family: 'Arial', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; display: flex; justify-content: space-between; padding: 5px 0; border-top: 1px solid var(--text-color); }
-        nav { max-width: 1200px; margin: 0 auto; border-bottom: 1px solid var(--text-color); padding: 10px 0; display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; }
-        .nav-links a { color: var(--text-color); text-decoration: none; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 0.85rem; margin-right: 15px; text-transform: uppercase; }
-        .nav-links a:hover { color: var(--accent-color); }
-        .section-header { max-width: 1200px; margin: 30px auto 20px auto; font-family: 'Arial', sans-serif; text-transform: uppercase; color: var(--accent-color); border-bottom: 2px solid var(--text-color); padding-bottom: 5px; }
         
-        /* PHOTO JOURNALISM GRID */
-        .gallery-grid { max-width: 1200px; margin: 0 auto 50px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .gallery-item { background: #222; border: 1px solid #333; overflow: hidden; border-radius: 4px; transition: transform 0.2s; }
-        .gallery-item:hover { transform: scale(1.02); }
-        .placeholder-photo { width: 100%; height: 250px; background: #333; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; color: #888; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        .gallery-caption { padding: 15px; font-size: 0.9rem; line-height: 1.4; color: #ccc; border-top: 1px solid #333; }
-        footer { max-width: 1200px; margin: 50px auto 20px auto; border-top: 1px solid var(--text-color); padding-top: 20px; text-align: center; font-family: 'Arial', sans-serif; font-size: 0.85rem; color: #888; }
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 0 20px; 
+            line-height: 1.6; 
+        }
+        
+        /* HEADER & MASTHEAD */
+        header { 
+            text-align: center; 
+            padding: 20px 0 10px 0; 
+            border-bottom: 4px double var(--primary-color); 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        .publication-title { 
+            font-size: 3.5rem; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: -1px; 
+        }
+        
+        .masthead-meta { 
+            font-family: 'Arial', sans-serif; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 5px 0; 
+            border-top: 1px solid var(--primary-color); 
+        }
+        
+        /* NAVIGATION BAR */
+        nav { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            border-bottom: 1px solid var(--primary-color); 
+            padding: 10px 0; 
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
+            flex-wrap: wrap; 
+        }
+        
+        .nav-links a { 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-family: 'Arial', sans-serif; 
+            font-weight: bold; 
+            font-size: 0.85rem; 
+            margin-right: 15px; 
+            text-transform: uppercase; 
+        }
+        
+        .nav-links a:hover { 
+            color: var(--accent-color); 
+        }
+        
+        .section-header { 
+            max-width: 1200px; 
+            margin: 30px auto 20px auto; 
+            font-family: 'Arial', sans-serif; 
+            text-transform: uppercase; 
+            color: var(--accent-color); 
+            border-bottom: 2px solid var(--primary-color); 
+            padding-bottom: 5px; 
+        }
+        
+        /* PHOTO JOURNALISM GRID MODIFICATIONS */
+        .gallery-grid { 
+            max-width: 1200px; 
+            margin: 0 auto 50px auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+        
+        .gallery-item { 
+            background: #ffffff; /* Puti ang loob ng card */
+            border: 1px solid var(--border-color); 
+            overflow: hidden; 
+            border-radius: 4px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Bahagyang anino para umangat ang litrato */
+            transition: transform 0.2s; 
+        }
+        
+        .gallery-item:hover { 
+            transform: scale(1.02); 
+        }
+        
+        .gallery-caption { 
+            padding: 15px; 
+            font-size: 0.95rem; 
+            line-height: 1.5; 
+            color: #444444; 
+            border-top: 1px solid var(--border-color); 
+        }
+        
+        /* FOOTER */
+        footer { 
+            max-width: 1200px; 
+            margin: 50px auto 20px auto; 
+            border-top: 1px solid var(--primary-color); 
+            padding-top: 20px; 
+            text-align: center; 
+            font-family: 'Arial', sans-serif; 
+            font-size: 0.85rem; 
+            color: #666; 
+        }
     </style>
 </head>
 <body>
+
+    <!-- HEADER SECTION -->
     <header>
+        <div style="text-align: center; margin-bottom: 10px;">
+            <img src="logo.jpg.png" alt="Ang Astesian Logo" style="height: 100px; width: auto; max-width: 100%; object-fit: contain;">
+        </div>
         <div class="publication-title">Ang Astesian</div>
-        <div class="masthead-meta"><div>Ang Astesian News and Current Affairs</div><div>Agosto 2026</div><div>Opisyal na Pahayagan ng ASTES, Inc.</div></div>
+        <div class="masthead-meta">
+            <div>The ASTES Gallery</div>
+            <div id="current-month">Agosto 2026</div>
+            <div>Opisyal na Pahayagan ng ASTES</div>
+        </div>
     </header>
+
+    <!-- NAVIGATION MENU -->
     <nav>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -50,16 +161,40 @@
             <a href="gallery.html" style="color: var(--accent-color);">Astesian's Gallery</a>
         </div>
     </nav>
-    <h1 class="section-header">Galeriya ng Astesian</h1>
     
+    <h1 class="section-header">Astesian's Gallery</h1>
+    
+    <!-- PHOTO ITEMS GRID -->
     <div class="gallery-grid">
-        <!-- PHOTO ITEM 1 -->
+        
+        <!-- LARAWAN 1 -->
         <div class="gallery-item">
             <img src="torch.png" alt="Lakasayahan 2026" style="width:100%; height:250px; object-fit:cover;">
-            <div class="gallery-caption"><strong>Pagsisindi ng Sulo ng Lakasayahan</strong> — Tanda ng pagsisimula ng tunggalian sa palakasan, sinindihan na ang Sulo ng Lakasayahan para sa taong 2026 sa pangunguna ng Sports Club, kasama ang kinatawan ng bawat kuponan</div>
+            <div class="gallery-caption">
+                <strong>Pagsisindi ng Sulo ng Lakasayahan</strong> — Tanda ng pagsisimula ng tunggalian sa palakasan, sinindihan na ang Sulo ng Lakasayahan para sa taong 2026 sa pangunguna ng Sports Club, kasama ang kinatawan ng bawat kuponan</div>
+            </div>
         </div>
 
-            
-    <footer><p>&copy; 2026 Ang Astesian. All rights reserved.</p></footer>
+<div class="gallery-grid">
+
+        <!-- LARAWAN 2 (Placeholder) -->
+        <div class="gallery-item">
+            <img src="wika.png" alt="Buwan ng Wikang Pambansa 2026" style="width:100%; height:250px; object-fit:contain; background:#eeeeee;">
+            <div class="gallery-caption">
+                <strong>Buwan ng Wikang Pambansa 2026</strong> — Tagumpay ang Astesian sa pagdiriwang ng Buwan ng Wikang Pambansa 2026, sa pangunguna ng Samahang Filipino.
+            </div>
+        </div>
+
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Ang Astesian. All rights reserved. Pinamamahalaan ng Student Media Council.</p>
+    </footer>
+
+    <script>
+        // Automatic calendar date engine
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('tl-PH', options);
+    </script>
 </body>
 </html>
